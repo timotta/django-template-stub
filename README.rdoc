@@ -40,6 +40,8 @@ Put the templatestub folder in your project and add this line to your urls.py:
 == Thanks
 
 @hltbra for the original idea
+
 @igorsobreira for helping with python and django
+
 @everton_carpes for helping with ideas on how to do
 

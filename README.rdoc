@@ -1,0 +1,36 @@
+= django-template-stub
+
+An app to support your javascript tests stubing your django templates. 
+
+== How it works
+
+At your javascript test, unless you create a html fixture, you have to do an ajax
+request like in the example bellow, and use this html as a fixture.
+
+	/templatestub/
+		?t=my_template.html
+		&tt=one_template_tag
+		&tt=other_template_tag:<span>template_tag_result</span>
+		&f=a_filter:filter_result
+		&f=other_filter
+		&c={"person":{"name":"Tiago"},"country":{"nome":"Brasil"}}
+
+== Parameters
+
+Parameter that cannot have to be repeated:
+	t  - Template path, relative to one of TEMPLATE_DIRS
+	c  - Json representing the objects in template context
+	
+Parameter that can be repeated:
+	tt - Template tag that you want to replace in the follow format tag_name:tag_return 
+	f  - Filter that you want to replate in the follow format filter_name:filter_return
+		
+	The tag_return ans filter_return aren't required
+
+== How to install
+
+Put the templatestub folder in your project and add this line to your urls.py:
+
+	(r'^', include('templatestub.urls')),
+	
+

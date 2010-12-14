@@ -1,0 +1,26 @@
+No qunit faça uma requisição para
+
+	/templatestub/
+
+Com os seguintes parametros:
+
+	Parametro que não podem ser repetidos:
+		t  - Path do template
+		c  - Json contendo o contexto que você deseja inserir na renderização do template
+	
+	Parametros que podem ser repetidos
+		tt - Template tags que você deseja substituir no seguinte formato nome_tag:valor_retornado 
+		f  - Filtros que você deseja substituir no seguinte formato nome_tag:valor_retornado
+		
+		obs: Se não for necessario que a template tag e o filtro retornem nenhum valor, basta não colocar
+			 o dois pontos.
+
+Exemplo:
+
+	/templatestub/
+		?t=desktop/components/home/malhacao/highlights/highlight_quote_de_personagem.html
+		&tt=personagem_do_highlight
+		&tt=rounded_corners:<span>bla</span>
+		&f=foto_do_tipo:foto.jpg
+		&f=outro_filtro
+		&c={"highlight":{"edit":false},"personagem":{"nome":"Tiago"}}

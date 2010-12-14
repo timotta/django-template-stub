@@ -2,10 +2,14 @@
 
 An app to support your javascript tests stubing your django templates. 
 
-== How it works
+== Why?
 
-At your javascript test, unless you create a html fixture, you have to do an ajax
-request like in the example bellow, and use this html as a fixture.
+On javascript tests, unless creating html fixtures representing your django
+templates, you can obtain these fixtures requesting by ajax. It avoids code
+duplication and fake green tests, integrating your javascript tests with the
+templates that it works with.
+
+== Example
 
 	/templatestub/
 		?t=my_template.html
@@ -27,7 +31,7 @@ Parameter that can be repeated:
 		
 	The tag_return ans filter_return aren't required
 
-== How to install
+== Installing
 
 Put the templatestub folder in your project and add this line to your urls.py:
 

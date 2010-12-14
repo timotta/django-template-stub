@@ -21,7 +21,7 @@ templates that it works with.
 
 == Parameters
 
-Parameter that cannot have to be repeated:
+Parameter that cannot be repeated:
 	t  - Template path, relative to one of TEMPLATE_DIRS
 	c  - Json representing the objects in template context
 	
@@ -37,4 +37,9 @@ Put the templatestub folder in your project and add this line to your urls.py:
 
 	(r'^', include('templatestub.urls')),
 	
+== Thanks
+
+@hltbra for the original idea
+@igorsobreira for helping with python and django
+@everton_carpes for helping with ideas on how to do
 
